@@ -13,12 +13,9 @@ namespace AggregateGDPPopulation.Tests
         [Fact]
         public async void ShouldBeAbleToCreateAggregateJsonFile()
         {
-            Aggregate a = new Aggregate();
-            //a.ReadDataFile(@"../../../../AggregateGDPPopulation/data/datafile.csv");
-            //a.ReadMapperFile(@"../../../../AggregateGDPPopulation/data/mapper.json");
+            Aggregate AggObj = new Aggregate();
 
-            await a.GenerateDatafile();
-            //a.WriteJsonFile();
+            await AggObj.GenerateDatafile(@"../../../../AggregateGDPPopulation/data/datafile.csv", @"../../../../AggregateGDPPopulation/data/mapper.json");
 
             StreamReader file1 = new StreamReader(@"../../../../AggregateGDPPopulation/data/output.json");
             StreamReader file2 = new StreamReader(@"../../../../AggregateGDPPopulation/data/expected-output.json");
@@ -26,10 +23,13 @@ namespace AggregateGDPPopulation.Tests
             string json1 = file1.ReadToEnd();
             string json2 = file2.ReadToEnd();
 
-            var dic1 = JsonConvert.DeserializeObject<Dictionary<string, data>>(json1);
-            var dic2 = JsonConvert.DeserializeObject<Dictionary<string, data>>(json2);
+            file1.Close();
+            file2.Close();
 
-            bool dictionariesEqual = (dic1.Keys.Count == dic2.Keys.Count && dic1.Keys.All(k => dic2.ContainsKey(k) && dic1[k].Equals(dic2[k])));
+            var dic1 = JsonConvert.DeserializeObject<Dictionary<string, Data>>(json1);
+            var dic2 = JsonConvert.DeserializeObject<Dictionary<string, Data>>(json2);
+
+            bool dictionariesEqual = (dic1.Keys.Count == dic2.Keys.Count && dic1.Keys.All(k => dic2.ContainsKey(k) && dic1[k].IsEquals(dic2[k])));
             Assert.True(dictionariesEqual);
         }
     }
