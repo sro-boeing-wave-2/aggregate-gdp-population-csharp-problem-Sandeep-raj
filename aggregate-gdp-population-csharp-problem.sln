@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AggregateGDPPopulation", "AggregateGDPPopulation\AggregateGDPPopulation.csproj", "{C3DEBDA4-7FFD-469A-81A8-D2D114AD2CB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AggregateGDPPopulation", "AggregateGDPPopulation\AggregateGDPPopulation.csproj", "{C3DEBDA4-7FFD-469A-81A8-D2D114AD2CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AggregateGDPPopulation.Tests", "AggregateGDPPopulation.Tests\AggregateGDPPopulation.Tests.csproj", "{4C4A4101-E549-48BD-9DD1-2BF7A1EAB5AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AggregateGDPPopulation.Tests", "AggregateGDPPopulation.Tests\AggregateGDPPopulation.Tests.csproj", "{4C4A4101-E549-48BD-9DD1-2BF7A1EAB5AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C3DEBDA4-7FFD-469A-81A8-D2D114AD2CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +41,11 @@ Global
 		{4C4A4101-E549-48BD-9DD1-2BF7A1EAB5AF}.Release|x64.Build.0 = Release|Any CPU
 		{4C4A4101-E549-48BD-9DD1-2BF7A1EAB5AF}.Release|x86.ActiveCfg = Release|Any CPU
 		{4C4A4101-E549-48BD-9DD1-2BF7A1EAB5AF}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {042D2F5D-4A05-4D0B-8996-9C161D903E4C}
 	EndGlobalSection
 EndGlobal
